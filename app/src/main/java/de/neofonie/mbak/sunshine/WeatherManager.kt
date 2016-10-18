@@ -71,7 +71,7 @@ object WeatherManager {
   private fun getReadableDateString(time: Long): String {
     // Because the API returns a unix timestamp (measured in seconds),
     // it must be converted to milliseconds in order to be converted to valid date.
-    val shortenedDateFormat = SimpleDateFormat("EEE, MMM dd")
+    val shortenedDateFormat = SimpleDateFormat("EEE, MMM dd", Locale.getDefault())
     return shortenedDateFormat.format(time)
   }
 }
