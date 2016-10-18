@@ -1,1 +1,11 @@
+gradle.ext {
+  weatherApiKey = ''
+  try {
+    Properties properties = new Properties()
+    properties.load(new File('local.properties').newDataInputStream())
+    weatherApiKey = properties.getProperty('weather.api.key', '')
+  } catch (Exception ignore) {
+  }
+}
+
 include ':app'
