@@ -47,7 +47,7 @@ class MainActivity : AppCompatActivity() {
     if (intent.resolveActivity(packageManager) != null) {
       startActivity(intent)
     } else {
-      Log.d(LOG_TAG, "Couldn't call $location, no receiving apps installed!");
+      Log.d(LOG_TAG, "Couldn't call $location, no receiving apps installed!")
     }
   }
 
